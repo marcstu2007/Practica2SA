@@ -1,0 +1,21 @@
+# Usa una imagen de Python como base
+FROM python:3.9-slim
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Copia los archivos necesarios al directorio de trabajo
+COPY requirements.txt .
+COPY . .
+
+# Instala las dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expone el puerto en el que se ejecuta la aplicación Flask
+EXPOSE 3000
+
+# Comando por defecto que se ejecutará al iniciar el contenedor
+CMD ["python", "server.py"]
+
+# docker build -t agify .
+# docker run -p 3000:3000 --name agify-container agify
