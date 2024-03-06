@@ -19,3 +19,6 @@ CMD ["python", "server.py"]
 
 # docker build -t gateway .
 # docker run -p 3002:3002 --name gateway-container gateway
+
+# docker tag gateway:latest marcstu2007/gateway:1
+# docker push marcstu2007/gateway:1

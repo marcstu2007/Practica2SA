@@ -19,3 +19,6 @@ CMD ["python", "server.py"]
 
 # docker build -t genderize .
 # docker run -p 3001:3001 --name genderize-container genderize
+
+# docker tag genderize:latest marcstu2007/genderize:1
+# docker push marcstu2007/genderize:1

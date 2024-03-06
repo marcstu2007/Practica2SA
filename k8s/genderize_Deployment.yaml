@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: genderize
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: genderize
+  template:
+    metadata:
+      labels:
+        app: genderize
+    spec:
+      containers:
+      - name: genderize
+        image: marcstu2007/genderize:1
+        ports:
+        - containerPort: 3001  # El puerto en el que tu aplicación Node.js está escuchando

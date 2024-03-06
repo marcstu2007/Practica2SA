@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agify
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agify
+  template:
+    metadata:
+      labels:
+        app: agify
+    spec:
+      containers:
+      - name: agify
+        image: marcstu2007/agify:1
+        ports:
+        - containerPort: 3000  # El puerto en el que tu aplicación Node.js está escuchando

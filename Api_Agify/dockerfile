@@ -19,3 +19,6 @@ CMD ["python", "server.py"]
 
 # docker build -t agify .
 # docker run -p 3000:3000 --name agify-container agify
+
+# docker tag agify:latest marcstu2007/agify:1
+# docker push marcstu2007/agify:1
